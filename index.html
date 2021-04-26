@@ -7,7 +7,62 @@
     <title>Ezone Signup Form</title>
   </head>
   <body>
-    <div id="app"></div>
+    <form>
+      <fieldset id="personalInfo">
+        <legend>Personal information</legend>
+        <div class="form-content">
+          <label for="first_name">First name</label>
+          <input required type="text" id="first_name" name="full_name" autocomplete="given-name">
+        </div>
+        <div class="form-content">
+          <label for="last_name">Last name</label>
+          <input required type="text" id="last_name" name="full_name" autocomplete="family-name">
+        </div>
+        <div class="form-content">
+          <label for="email">E-mail</label>
+          <input required type="email" id="email" name="email" autocomplete="email">
+        </div>
+        <div class="form-content">
+          <label for="age">Age</label>
+          <input required type="text" name="age" id="age" minlength="1" maxlength="2" pattern="(?=.*\d)" inputmode="numeric">
+        </div>
+        <div class="form-content">
+          <label for="gamer_tag">Gamertag</label>
+          <input required type="text" id="gamer_tag" name="gamer_tag">
+        </div>
+        <div class="form-content">
+          <label for="password">Password</label>
+          <input required type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        </div>
+        <!-- TODO: Find ud af om der skal være et gentag password felt. -->
+      </fieldset>
+      <fieldset id="gamerInfo">
+        <legend>Gaming information</legend>
+        <ul role="list" class="controls">
+          <li>
+            <label for="pc">
+              <input checked type="checkbox" id="pc" name="platform" value="pc">
+              PC
+            </label>
+          </li>
+          <li>
+            <label for="console">
+              <input type="checkbox" id="console" name="platform" value="console">
+              Console
+            </label>
+          </li>
+        </ul>
+          
+        <div class="form-content"></div>
+        <div class="form-content"></div>
+        <div class="form-content"></div>
+      </fieldset>
+      <fieldset id="areasInfo">
+        <legend>Problem-/improvement areas</legend>
+        <div class="form-content"></div>
+        <div class="form-content"></div>
+      </fieldset>
+    </form>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
