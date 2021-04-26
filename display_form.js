@@ -1,8 +1,6 @@
 "use strict"; 
 
 export function formController(gameData) {
-    console.log(gameData);
-
     displayForm("#gameTypes", gameData.types, "game_type");
     displayForm("#games", gameData.games, "games");
     displayForm("#problemAreas", gameData.areas, "problem_area");
@@ -10,12 +8,10 @@ export function formController(gameData) {
 }
 
 function displayForm(destination, jsonData, nameAtr) {
-    console.log(destination, jsonData);
     const dest = document.querySelector(destination);
 
     jsonData.forEach(entry => {
         const newEntry = entry.toLowerCase().replaceAll(" ", "-").replaceAll("/", "-");
-        console.log(newEntry)
         
         const li = document.createElement("li");
         dest.append(li);
