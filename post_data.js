@@ -1,5 +1,7 @@
 "use strict";
 
+import { displayEndMessage } from "./display_message";
+
 const url = "https://ezone-cced.restdb.io/rest/ezone";
 const apiKey = "6083dfc328bf9b609975a609";
 
@@ -16,5 +18,7 @@ export async function post(data) {
         },
         body: postData
     })
-    console.log(jsonData.status);
+    console.log(jsonData);
+
+    displayEndMessage(jsonData.status);
 }
