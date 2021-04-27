@@ -1,0 +1,11 @@
+@use "../abstracts/vars";
+
+section {
+  margin: auto;
+  width: 80vw;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,60 @@
+@use "../abstracts/vars";
+
+/* SHAPIRO FONT */
+@font-face {
+  font-family: shapiro5;
+  src: url(public/shapiro/ogj_type_design_-_shapiro_5_light_fly-webfont.woff2);
+}
+
+@font-face {
+  font-family: shapiro35;
+  src: url(public/shapiro/ogj_type_design_-_shapiro_35_feather_text-webfont.woff2);
+}
+
+@font-face {
+  font-family: shapiro97;
+  src: url(public/shapiro/ogj_type_design_-_shapiro_97_air_extd-webfont.woff2);
+}
+
+/* INIFORM FONT */
+
+@font-face {
+  font-family: uniform_condensed_bold;
+  src: url(public/uniform/uniform_condensed_bold-webfont.woff2);
+}
+
+@font-face {
+  font-family: uniform_condensed_light;
+  src: url(public/uniform/uniform_condensed_light-webfont.woff2);
+}
+
+@font-face {
+  font-family: uniform_condensed_medium;
+  src: url(public/uniform/uniform_condensed_medium-webfont.woff2);
+}
+
+h2 {
+  font-family: uniform_condensed_bold;
+  font-size: 6rem;
+  color: vars.$blue-02;
+}
+
+h3 {
+  font-family: uniform_condensed_bold;
+  font-size: 3rem;
+  color: vars.$blue-02;
+}
+
+p {
+  font-size: 2rem;
+  color: vars.$orange-01;
+}
+
+label,
+legend {
+  color: vars.$font-color;
+}
+
+legend {
+  font-size: 2rem;
+}
