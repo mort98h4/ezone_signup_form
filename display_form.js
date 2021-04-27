@@ -1,10 +1,12 @@
 "use strict"; 
 
-export function formController(gameData) {
-    displayForm("#gameTypes", gameData.types, "game_type");
-    displayForm("#games", gameData.games, "games");
-    displayForm("#problemAreas", gameData.areas, "problem_area");
-    displayForm("#improvementAreas", gameData.areas, "improvement_area");
+import json from "./data.json";
+
+export function formController() {
+    displayForm("#gameTypes", json.types, "game_type");
+    displayForm("#games", json.games, "games");
+    displayForm("#problemAreas", json.areas, "problem_area");
+    displayForm("#improvementAreas", json.areas, "improvement_area");
 }
 
 function displayForm(destination, jsonData, nameAtr) {
