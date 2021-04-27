@@ -7,64 +7,130 @@
     <title>Ezone Signup Form</title>
   </head>
   <body>
-    <form>
-      <fieldset id="personalInfo">
-        <legend>Personal information</legend>
-        <div class="form-content">
-          <label for="first_name">First name</label>
-          <input required type="text" id="first_name" name="full_name" autocomplete="given-name">
-        </div>
-        <div class="form-content">
-          <label for="last_name">Last name</label>
-          <input required type="text" id="last_name" name="full_name" autocomplete="family-name">
-        </div>
-        <div class="form-content">
-          <label for="email">E-mail</label>
-          <input required type="email" id="email" name="email" autocomplete="email">
-        </div>
-        <div class="form-content">
-          <label for="age">Age</label>
-          <input required type="text" name="age" id="age" minlength="1" maxlength="2" pattern="(?=.*\d)" inputmode="numeric">
-        </div>
-        <div class="form-content">
-          <label for="gamer_tag">Gamertag</label>
-          <input required type="text" id="gamer_tag" name="gamer_tag">
-        </div>
-        <div class="form-content">
-          <label for="password">Password</label>
-          <input required type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-        </div>
-        <!-- TODO: Find ud af om der skal være et gentag password felt. -->
-      </fieldset>
-      <fieldset id="gamerInfo">
-        <legend>Gaming information</legend>
-        <ul role="list" class="controls">
-          <li>
-            <label for="pc">
-              <input checked type="checkbox" id="pc" name="platform" value="pc">
-              PC
-            </label>
-          </li>
-          <li>
-            <label for="console">
-              <input type="checkbox" id="console" name="platform" value="console">
-              Console
-            </label>
-          </li>
-        </ul>
-        <ul id="gameTypes" role="list" class="controls"></ul>
-        <ul id="games" role="list" class="controls"></ul>
-        <div class="form-content">
-          <label for="hours_a_day">Hours a day</label>
-          <input required type="number" id="hours_a_day" name="hours_a_day" min="0" max="24" value="0">
-        </div>
-      </fieldset>
-      <fieldset id="areasInfo">
-        <legend>Problem-/improvement areas</legend>
-        <ul id="problemAreas" role="list" class="controls"></ul>
-        <ul id="improvementAreas" role="list" class="controls"></ul>
-      </fieldset>
-    </form>
+    <section>
+      <article>
+        <h2>Esport IS Sport</h2>
+        <h3>You have to be healthy <br />to be one of the best!</h3>
+        <p>Sign up and read how to be</p>
+      </article>
+
+      <form>
+        <div><span>1</span></div>
+        <div><span>2</span></div>
+        <div><span>3</span></div>
+        <div><span>4</span></div>
+        <fieldset id="personalInfo">
+          <legend>Personal information</legend>
+          <div class="form-content">
+            <label for="first_name">First name</label>
+            <input
+              required
+              type="text"
+              id="first_name"
+              name="full_name"
+              autocomplete="given-name"
+            />
+          </div>
+          <div class="form-content">
+            <label for="last_name">Last name</label>
+            <input
+              required
+              type="text"
+              id="last_name"
+              name="full_name"
+              autocomplete="family-name"
+            />
+          </div>
+          <div class="form-content">
+            <label for="email">E-mail</label>
+            <input
+              required
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-content">
+            <label for="age">Age</label>
+            <input
+              required
+              type="text"
+              name="age"
+              id="age"
+              minlength="1"
+              maxlength="2"
+              pattern="(?=.*\d)"
+              inputmode="numeric"
+            />
+          </div>
+          <div class="form-content">
+            <label for="gamer_tag">Gamertag</label>
+            <input required type="text" id="gamer_tag" name="gamer_tag" />
+          </div>
+          <div class="form-content">
+            <label for="password">Password</label>
+            <input
+              required
+              type="password"
+              id="password"
+              name="password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            />
+          </div>
+          <!-- TODO: Find ud af om der skal være et gentag password felt. -->
+        </fieldset>
+        <fieldset id="gamerInfo" class="hide">
+          <legend>Gaming information</legend>
+          <ul role="list" class="controls">
+            <li>
+              <label for="pc">
+                <input
+                  checked
+                  type="checkbox"
+                  id="pc"
+                  name="platform"
+                  value="pc"
+                />
+                PC
+              </label>
+            </li>
+            <li>
+              <label for="console">
+                <input
+                  type="checkbox"
+                  id="console"
+                  name="platform"
+                  value="console"
+                />
+                Console
+              </label>
+            </li>
+          </ul>
+          <ul id="gameTypes" role="list" class="controls"></ul>
+          <ul id="games" role="list" class="controls"></ul>
+          <div class="form-content">
+            <label for="hours_a_day">Hours a day</label>
+            <input
+              required
+              type="number"
+              id="hours_a_day"
+              name="hours_a_day"
+              min="0"
+              max="24"
+              value="0"
+            />
+          </div>
+        </fieldset>
+        <fieldset id="areasInfo">
+          <legend>Problem-/improvement areas</legend>
+          <ul id="problemAreas" role="list" class="controls"></ul>
+          <ul id="improvementAreas" role="list" class="controls"></ul>
+        </fieldset>
+
+        <button>Next</button>
+      </form>
+    </section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
