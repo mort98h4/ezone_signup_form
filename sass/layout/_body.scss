@@ -3,4 +3,5 @@ body {
   width: 100vw;
   min-height: 100vh;
   background-color: vars.$bg-color;
+  overflow-x: hidden;
 }
