@@ -1,11 +1,31 @@
 @use "../abstracts/vars";
 
-section {
+.splash {
   margin: auto;
   width: 80vw;
-  min-height: 90vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  margin: auto;
+  width: 80vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  fieldset {
+    flex-grow: 2;
+    flex-basis: 400px;
+  }
+  article {
+    flex-grow: 2;
+    flex-basis: 400px;
+  }
 }

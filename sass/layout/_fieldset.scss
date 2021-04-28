@@ -11,24 +11,8 @@ fieldset {
     display: flex;
     flex-direction: column;
   }
-}
 
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px vars.$blue-02-pastel inset;
-}
-
-input:is([type="text"], [type="number"], [type="email"], [type="password"]),
-textarea {
-  color: vars.$font-color;
-  border: 1px solid vars.$grid-btn-background;
-  background: vars.$blue-02-pastel;
-  padding-block: 8px 10px;
-  padding-inline: 12px;
-  border-radius: 4px;
-  outline: none;
-  resize: none;
-}
-
-:is(input, textarea):focus {
-  border-color: vars.$blue-02;
+  .form-content input {
+    margin-bottom: 0.5rem;
+  }
 }

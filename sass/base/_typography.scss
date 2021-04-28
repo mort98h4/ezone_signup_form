@@ -40,14 +40,22 @@ h2 {
 }
 
 h3 {
-  font-family: uniform_condensed_bold;
-  font-size: 3rem;
+  font-family: shapiro97;
+  font-stretch: condensed;
+  font-size: 2rem;
   color: vars.$blue-02;
 }
 
 p {
+  font-family: uniform_condensed_bold;
   font-size: 2rem;
   color: vars.$orange-01;
+}
+button {
+  font-family: uniform_condensed_medium;
+}
+.btn span {
+  font-family: uniform_condensed_medium;
 }
 
 label,
@@ -57,4 +65,9 @@ legend {
 
 legend {
   font-size: 2rem;
+  font-family: uniform_condensed_bold;
+}
+
+label {
+  font-family: uniform_condensed_medium;
 }

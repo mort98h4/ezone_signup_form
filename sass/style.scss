@@ -5,3 +5,19 @@
 .hide {
   display: none;
 }
+
+.opacity {
+  opacity: 1;
+  animation-name: opac;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

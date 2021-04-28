@@ -7,18 +7,30 @@
     <title>Ezone Signup Form</title>
   </head>
   <body>
-    <section>
+    <!-- <section class="splash">
+      <h1>ELEVATING PERPORMANCE</h1>
+      <h2>IN ESPORTS ATHLETES</h2>
+      <p>
+        An independent collective of performance experts, helping you to push
+        your boundaries and <br />challenge your limits. It's time to get in the
+        zone
+      </p>
+    </section> -->
+    <section class="form">
       <article>
-        <h2>Esport IS Sport</h2>
-        <h3>You have to be healthy <br />to be one of the best!</h3>
+        <h2>ESPORT IS SPORT</h2>
+        <h3>YOU HAVE TO BE HEALTHY <br />TO BE ONE OF THE BEST!</h3>
         <p>Sign up and read how to be</p>
+        <button class="view_form"><span>&#10132;</span></button>
       </article>
 
-      <form>
-        <div><span>1</span></div>
-        <div><span>2</span></div>
-        <div><span>3</span></div>
-        <div><span>4</span></div>
+      <form class="">
+        <div class="btn_container_form">
+          <div class="btn"><span>1</span></div>
+          <div class="btn"><span>2</span></div>
+          <div class="btn"><span>3</span></div>
+          <div class="btn"><span>4</span></div>
+        </div>
         <fieldset id="personalInfo">
           <legend>Personal information</legend>
           <div class="form-content">
@@ -55,15 +67,14 @@
             <label for="age">Age</label>
             <input
               required
-              type="text"
+              type="number"
               name="age"
               id="age"
-              minlength="1"
-              maxlength="2"
-              pattern="(?=.*\d)"
-              inputmode="numeric"
+              min="1"
+              max="99"
             />
           </div>
+
           <div class="form-content">
             <label for="gamer_tag">Gamertag</label>
             <input required type="text" id="gamer_tag" name="gamer_tag" />
@@ -122,15 +133,26 @@
             />
           </div>
         </fieldset>
-        <fieldset id="areasInfo">
+        <fieldset id="areasInfo" class="hide">
           <legend>Problem-/improvement areas</legend>
           <ul id="problemAreas" role="list" class="controls"></ul>
           <ul id="improvementAreas" role="list" class="controls"></ul>
         </fieldset>
-
-        <button>Next</button>
+        <div class="btn_container">
+          <button>Next</button>
+        </div>
       </form>
     </section>
     <script type="module" src="/main.js"></script>
+    <script>
+      document.querySelector("form").classList.add("hide");
+      document
+        .querySelector(".view_form")
+        .addEventListener("click", displayForm);
+      function displayForm() {
+        document.querySelector("form").classList.remove("hide");
+        document.querySelector("form").classList.add("opacity");
+      }
+    </script>
   </body>
 </html>

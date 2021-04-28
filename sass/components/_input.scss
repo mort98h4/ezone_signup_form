@@ -1,0 +1,45 @@
+@use "../abstracts/vars";
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px vars.$blue-02-pastel inset;
+}
+
+input,
+textarea {
+  border: 1px solid vars.$grid-btn-background;
+  background: vars.$blue-02-pastel;
+  padding-block: 2px 4px;
+  padding-inline: 12px;
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+}
+
+:is(input, textarea):focus {
+  border-color: vars.$blue-02;
+  outline: none;
+}
+
+input:is([name="age"]) {
+  width: 50px;
+}
+
+input:valid {
+  border-color: vars.$grid-btn-background;
+}
+
+input:invalid {
+  border-color: vars.$orange-01;
+}
