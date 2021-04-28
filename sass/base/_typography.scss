@@ -3,54 +3,55 @@
 /* SHAPIRO FONT */
 @font-face {
   font-family: shapiro5;
-  src: url(./shapiro/ogj_type_design_-_shapiro_5_light_fly-webfont.woff2);
+  src: url(../shapiro/ogj_type_design_-_shapiro_5_light_fly-webfont.woff2);
 }
 
 @font-face {
   font-family: shapiro35;
-  src: url(./shapiro/ogj_type_design_-_shapiro_35_feather_text-webfont.woff2);
+  src: url(../shapiro/ogj_type_design_-_shapiro_35_feather_text-webfont.woff2);
 }
 
 @font-face {
   font-family: shapiro97;
-  src: url(./shapiro/ogj_type_design_-_shapiro_97_air_extd-webfont.woff2);
+  src: url(../shapiro/ogj_type_design_-_shapiro_97_air_extd-webfont.woff2);
 }
 
-/* INIFORM FONT */
+/* UNIFORM FONT */
 
 @font-face {
   font-family: uniform_condensed_bold;
-  src: url(./uniform/uniform_condensed_bold-webfont.woff2);
+  src: url(../uniform/uniform_condensed_bold-webfont.woff2);
 }
 
 @font-face {
   font-family: uniform_condensed_light;
-  src: url(./uniform/uniform_condensed_light-webfont.woff2);
+  src: url(../uniform/uniform_condensed_light-webfont.woff2);
 }
 
 @font-face {
   font-family: uniform_condensed_medium;
-  src: url(./uniform/uniform_condensed_medium-webfont.woff2);
+  src: url(../uniform/uniform_condensed_medium-webfont.woff2);
 }
 
 h2 {
   font-family: uniform_condensed_bold;
-  font-size: 6rem;
+  font-size: 4rem;
   color: vars.$blue-02;
 }
 
 h3 {
   font-family: shapiro97;
   font-stretch: condensed;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: vars.$blue-02;
 }
 
 p {
   font-family: uniform_condensed_bold;
-  font-size: 2rem;
+  font-size: 1.1rem;
   color: vars.$orange-01;
 }
+
 button {
   font-family: uniform_condensed_medium;
 }
@@ -65,10 +66,46 @@ span {
 }
 
 legend {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-family: uniform_condensed_bold;
 }
 
 label {
   font-family: uniform_condensed_medium;
+}
+
+@media only screen and (min-width: 992px) {
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  legend {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  h2 {
+    font-size: 6rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  legend {
+    font-size: 2rem;
+  }
 }

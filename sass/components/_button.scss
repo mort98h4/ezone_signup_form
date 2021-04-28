@@ -1,7 +1,7 @@
 @use "../abstracts/vars";
 
 button {
-  min-width: 10rem;
+  min-width: 7rem;
   max-width: 15rem;
   border-radius: 50px;
   background-color: transparent;
@@ -21,6 +21,8 @@ button:hover {
 .btn_container {
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  width: 70%;
 
   button {
     margin: 1rem;
@@ -30,9 +32,10 @@ button:hover {
   }
 
   button:disabled {
-      border-color: vars.$bg-color;
-      color: vars.$bg-color;
-      cursor:default;
+    border-color: vars.$bg-color;
+    color: vars.$bg-color;
+    cursor: default;
+    opacity: 0;
   }
 
   button:not(:disabled):hover {
@@ -45,11 +48,12 @@ button:hover {
 .btn_container_form {
   display: flex;
   justify-content: center;
+
   .btn {
     width: 42px;
     border-radius: 50%;
     background-color: transparent;
-    border: 1px solid vars.$bg-color;
+    border: 0.1px solid vars.$bg-color;
     color: vars.$bg-color;
     padding: 0.5rem;
     margin: 1rem;
@@ -59,14 +63,17 @@ button:hover {
     cursor: pointer;
   }
 
+  // for steps button
   .active {
     background-color: vars.$bg-color;
     color: vars.$font-color;
+    border: 0.1px solid vars.$bg-color;
   }
 
   .btn:hover {
     background-color: vars.$bg-color;
     color: vars.$font-color;
+    border: 0.1px solid vars.$bg-color;
   }
 
   .btn:active {
@@ -78,5 +85,15 @@ button:hover {
       background-color: vars.$blue-02;
       color: vars.$font-color;
     }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .btn_container {
+    width: 100%;
+  }
+
+  button {
+    min-width: 10rem;
   }
 }
