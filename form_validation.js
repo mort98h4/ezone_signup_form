@@ -9,6 +9,7 @@ export function isFormValid() {
     document.querySelectorAll("fieldset").forEach(el => {
         const attributes = el.getAttributeNames();
         if (attributes.indexOf("hidden") === -1) {
+            console.log(el);
             addEventListenersToBtns(el);
         }
     })
@@ -75,8 +76,6 @@ function addEventListenersToBtns(el) {
             el.setAttribute("hidden", true);
             document.querySelector("#personalInfo").removeAttribute("hidden");
             isFormValid();
-            // nextBtn.removeAttribute("hidden");
-            // submitBtn.setAttribute("hidden", true);
         } else if (!hoursADay) {
             el.setAttribute("hidden", true);
             document.querySelector("#gamerInfo").removeAttribute("hidden");

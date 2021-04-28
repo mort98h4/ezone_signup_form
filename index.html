@@ -15,11 +15,13 @@
       </article>
 
       <form>
-        <div><span>1</span></div>
-        <div><span>2</span></div>
-        <div><span>3</span></div>
-        <div><span>4</span></div>
-        <fieldset id="personalInfo">
+        <div id="steps">
+          <div class="step1" data-step="1">1</div>
+          <div class="step2" data-step="2">2</div>
+          <div class="step3" data-step="3">3</div>
+        </div>
+        
+        <fieldset id="personalInfo" data-step="1">
           <legend>Personal information</legend>
           <div class="form-content">
             <label for="first_name">First name</label>
@@ -81,7 +83,7 @@
           </div>
           <!-- TODO: Find ud af om der skal være et gentag password felt. -->
         </fieldset>
-        <fieldset id="gamerInfo" hidden>
+        <fieldset id="gamerInfo" data-step="2" hidden>
           <legend>Gaming information</legend>
           <ul role="list" class="controls">
             <li>
@@ -122,7 +124,7 @@
             />
           </div>
         </fieldset>
-        <fieldset id="areasInfo" hidden>
+        <fieldset id="areasInfo" data-step="3" hidden>
           <legend>Problem-/improvement areas</legend>
           <ul id="problemAreas" role="list" class="controls"></ul>
           <ul id="improvementAreas" role="list" class="controls"></ul>

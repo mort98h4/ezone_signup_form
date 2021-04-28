@@ -1,0 +1,21 @@
+@use "../abstracts/vars";
+
+#steps {
+    display: flex;
+    justify-content: space-evenly;
+    .step1, .step2, .step3 {
+        text-align: center;
+        color: vars.$font-color;
+        border-radius: 2rem;
+        border: 2px solid vars.$font-color;
+        margin: 1rem;
+        width: 2rem;
+        height: 2rem;
+        padding: 0;
+    }
+    :first-child {
+        color: vars.$orange-01;
+        border-color: vars.$orange-01;
+    }
+}
+
