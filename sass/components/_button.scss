@@ -10,9 +10,6 @@ button {
   padding: 0.5rem;
   transition: all 500ms ease-in;
   cursor: pointer;
-  :disabled {
-    border-color: hotpink;
-  }
 }
 
 button:hover {
@@ -30,7 +27,6 @@ button:hover {
     background-color: transparent;
     border: 1px solid vars.$font-color;
     color: vars.$font-color;
-    
   }
 
   button:disabled {
