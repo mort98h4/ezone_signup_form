@@ -7,4 +7,11 @@ form {
     text-align: center;
     margin: 5rem 0;
   }
+
+  .hint {
+    color: vars.$font-color;
+    font-size: 0.7rem;
+    margin-bottom: .5rem;
+    font-family: uniform_condensed_medium, sans-serif;
+  }
 }
