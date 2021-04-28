@@ -3,4 +3,8 @@
 form {
   background-color: vars.$button-fill;
   width: 400px;
+  p {
+    text-align: center;
+    margin: 5rem 0;
+  }
 }
