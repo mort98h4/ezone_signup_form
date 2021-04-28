@@ -87,12 +87,13 @@
 
           <div class="form-content">
             <label for="gamer_tag">Gamertag</label>
+            <span class="hint">This will be used as your username.</span>
             <input required type="text" id="gamer_tag" name="gamer_tag" />
           </div>
           <div class="form-content">
             <label for="password">Password</label>
             <span class="hint"
-              >Your password must contain at least one lowercase letter, one
+              >Must contain at least one lowercase letter, one
               uppercase letter, a number, and must be at least 8 characters
               long.</span
             >
@@ -109,7 +110,7 @@
         <fieldset id="gamerInfo" data-step="2" hidden>
           <legend>Gaming information</legend>
           <div>
-            <span>Choose your primary console</span>
+            <span>Choose your primary platforms</span>
             <ul role="list" class="controls">
               <li>
                 <label for="pc">
@@ -157,12 +158,12 @@
           <div class="form-content">
             <label for="hours_a_day">How many hours a day do you play?</label>
             <input
-              required
               type="number"
               id="hours_a_day"
               name="hours_a_day"
               min="0"
               max="24"
+              value="0"
             />
           </div>
         </fieldset>
@@ -174,6 +175,7 @@
               >Choose the areas of health problems/injuries you have had or
               have.</span
             >
+            <span class="hint">We only use this data to show and create relevant articles for you.</span>
             <div class="dropdown game_prop">
               <button class="drop_btn" type="button">
                 Current health issues
@@ -190,6 +192,7 @@
               >Choose the areas you want to focus on to limit the possibilities
               of injuries</span
             >
+            <span class="hint">We only use this data to show and create relevant articles for you.</span>
             <div class="dropdown game_imp">
               <button class="drop_btn" type="button">
                 Improvement of health
