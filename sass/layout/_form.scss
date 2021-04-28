@@ -2,21 +2,31 @@
 
 form {
   background-color: vars.$button-fill;
-  width: 400px;
-  height: 600px;
+  width: 100%;
+  height: 670px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  p {
-    text-align: center;
-    margin: 5rem 0;
-  }
+  margin-bottom: 3rem;
 
   .hint {
     color: vars.$font-color;
     font-size: 0.7rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     font-family: uniform_condensed_medium, sans-serif;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  form {
+    background-color: vars.$button-fill;
+    width: 400px;
+    margin-bottom: 0px;
+
+    p {
+      text-align: center;
+      margin: 5rem 0;
+    }
   }
 }

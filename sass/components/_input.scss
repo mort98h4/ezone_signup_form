@@ -16,9 +16,9 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px vars.$blue-02-pastel inset;
 }
 
-input,
+input:is([name="full_name"], [name="email"], [name="age"], [name="password"], [name="hours_a_day"], [name="gamer_tag"]),
 textarea {
-  border: 1px solid vars.$grid-btn-background;
+  border: 2px solid vars.$grid-btn-background;
   background: vars.$blue-02-pastel;
   padding-block: 2px 4px;
   padding-inline: 12px;
@@ -32,7 +32,7 @@ textarea {
   outline: none;
 }
 
-input:is([name="age"]) {
+:is([name="age"]) {
   width: 50px;
 }
 
@@ -42,4 +42,22 @@ input:valid {
 
 input:not(:focus):invalid {
   border-color: vars.$orange-01;
+}
+
+.submit {
+  height: 42px;
+  min-width: 7rem;
+  max-width: 15rem;
+  border-radius: 50px;
+  background-color: vars.$green-03;
+  color: black;
+  transition: all 500ms ease-in;
+  cursor: pointer;
+  align-self: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .submit {
+    min-width: 10rem;
+  }
 }

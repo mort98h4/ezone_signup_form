@@ -75,7 +75,14 @@
               pattern="(?=.*\d)"
               inputmode="numeric"
             /> -->
-            <input type="number" name="age" id="age" min="0" max="99" />
+            <input
+              required
+              type="number"
+              name="age"
+              id="age"
+              min="0"
+              max="99"
+            />
           </div>
 
           <div class="form-content">
@@ -84,7 +91,11 @@
           </div>
           <div class="form-content">
             <label for="password">Password</label>
-            <span class="hint">Your password must contain at least one lowercase letter, one uppercase letter, a number, and must be at least 8 characters long.</span>
+            <span class="hint"
+              >Your password must contain at least one lowercase letter, one
+              uppercase letter, a number, and must be at least 8 characters
+              long.</span
+            >
             <input
               required
               type="password"
@@ -98,7 +109,7 @@
         <fieldset id="gamerInfo" data-step="2" hidden>
           <legend>Gaming information</legend>
           <div>
-            <span>Your primary console</span>
+            <span>Choose your primary console</span>
             <ul role="list" class="controls">
               <li>
                 <label for="pc">
@@ -125,23 +136,26 @@
               </li>
             </ul>
           </div>
-
-          <div class="dropdown game_type">
-            <button class="drop_btn" type="button">Game Type</button>
-            <div class="drop_content hide type_content">
-              <ul id="gameTypes" role="list" class="controls"></ul>
+          <div>
+            <span>Choose the types of game genre you like</span>
+            <div class="dropdown game_type">
+              <button class="drop_btn" type="button">Game Type</button>
+              <div class="drop_content type_content">
+                <ul id="gameTypes" role="list" class="controls"></ul>
+              </div>
             </div>
           </div>
-
-          <div class="dropdown game_game">
-            <button class="drop_btn" type="button">Game Type</button>
-            <div class="drop_content hide game_content">
-              <ul id="games" role="list" class="controls"></ul>
+          <div>
+            <span>Choose the game types you play</span>
+            <div class="dropdown game_game">
+              <button class="drop_btn" type="button">Games</button>
+              <div class="drop_content game_content">
+                <ul id="games" role="list" class="controls"></ul>
+              </div>
             </div>
           </div>
-
           <div class="form-content">
-            <label for="hours_a_day">Hours a day</label>
+            <label for="hours_a_day">How many hours a day do you play?</label>
             <input
               required
               type="number"
@@ -155,24 +169,42 @@
         <fieldset id="areasInfo" data-step="3" hidden>
           <legend>Problem-/improvement areas</legend>
 
-          <div class="dropdown game_prop">
-            <button class="drop_btn" type="button">Game Type</button>
-            <div class="drop_content hide prop_content">
-              <ul id="problemAreas" role="list" class="controls"></ul>
+          <div>
+            <span
+              >Choose the areas of health problems/injuries you have had or
+              have.</span
+            >
+            <div class="dropdown game_prop">
+              <button class="drop_btn" type="button">
+                Current helth issues
+              </button>
+
+              <div class="drop_content prop_content">
+                <ul id="problemAreas" role="list" class="controls"></ul>
+              </div>
             </div>
           </div>
 
-          <div class="dropdown game_imp">
-            <button class="drop_btn" type="button">Game Type</button>
-            <div class="drop_content hide imp_content">
-              <ul id="improvementAreas" role="list" class="controls"></ul>
+          <div>
+            <span
+              >Choose the areas you want to focus on to limit the possibilities
+              of injuries</span
+            >
+            <div class="dropdown game_imp">
+              <button class="drop_btn" type="button">
+                Improvement of helth
+              </button>
+
+              <div class="drop_content imp_content">
+                <ul id="improvementAreas" role="list" class="controls"></ul>
+              </div>
             </div>
           </div>
         </fieldset>
         <div class="buttons btn_container">
           <button type="button" id="prevBtn" disabled>Previous</button>
           <button type="button" id="nextBtn">Next</button>
-          <input type="submit" hidden />
+          <input class="submit" type="submit" hidden />
         </div>
       </form>
     </section>
