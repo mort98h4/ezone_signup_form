@@ -6,6 +6,7 @@ fieldset {
   border-style: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 
   .form-content {
     display: flex;

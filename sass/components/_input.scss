@@ -37,9 +37,9 @@ input:is([name="age"]) {
 }
 
 input:valid {
-  border-color: vars.$grid-btn-background;
+  border-color: vars.$green-03;
 }
 
-input:invalid {
+input:not(:focus):invalid {
   border-color: vars.$orange-01;
 }

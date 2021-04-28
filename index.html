@@ -96,33 +96,49 @@
         </fieldset>
         <fieldset id="gamerInfo" data-step="2" hidden>
           <legend>Gaming information</legend>
-          <ul role="list" class="controls">
-            <li>
-              <label for="pc">
-                <input
-                  checked
-                  type="checkbox"
-                  id="pc"
-                  name="platform"
-                  value="pc"
-                />
-                PC
-              </label>
-            </li>
-            <li>
-              <label for="console">
-                <input
-                  type="checkbox"
-                  id="console"
-                  name="platform"
-                  value="console"
-                />
-                Console
-              </label>
-            </li>
-          </ul>
-          <ul id="gameTypes" role="list" class="controls"></ul>
-          <ul id="games" role="list" class="controls"></ul>
+          <div>
+            <span>Your primary console</span>
+            <ul role="list" class="controls">
+              <li>
+                <label for="pc">
+                  <input
+                    checked
+                    type="checkbox"
+                    id="pc"
+                    name="platform"
+                    value="pc"
+                  />
+                  PC
+                </label>
+              </li>
+              <li>
+                <label for="console">
+                  <input
+                    type="checkbox"
+                    id="console"
+                    name="platform"
+                    value="console"
+                  />
+                  Console
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dropdown game_type">
+            <button class="drop_btn" type="button">Game Type</button>
+            <div class="drop_content hide type_content">
+              <ul id="gameTypes" role="list" class="controls"></ul>
+            </div>
+          </div>
+
+          <div class="dropdown game_game">
+            <button class="drop_btn" type="button">Game Type</button>
+            <div class="drop_content hide game_content">
+              <ul id="games" role="list" class="controls"></ul>
+            </div>
+          </div>
+
           <div class="form-content">
             <label for="hours_a_day">Hours a day</label>
             <input
@@ -137,13 +153,22 @@
         </fieldset>
         <fieldset id="areasInfo" data-step="3" hidden>
           <legend>Problem-/improvement areas</legend>
-          <ul id="problemAreas" role="list" class="controls"></ul>
-          <ul id="improvementAreas" role="list" class="controls"></ul>
+
+          <div class="dropdown game_prop">
+            <button class="drop_btn" type="button">Game Type</button>
+            <div class="drop_content hide prop_content">
+              <ul id="problemAreas" role="list" class="controls"></ul>
+            </div>
+          </div>
+
+          <div class="dropdown game_imp">
+            <button class="drop_btn" type="button">Game Type</button>
+            <div class="drop_content hide imp_content">
+              <ul id="improvementAreas" role="list" class="controls"></ul>
+            </div>
+          </div>
         </fieldset>
-        <div
-          class="buttons btn_container"
-          style="display: flex; justify-content: space-between"
-        >
+        <div class="buttons btn_container">
           <button type="button" id="prevBtn" disabled>Previous</button>
           <button type="button" id="nextBtn">Next</button>
           <input type="submit" hidden />
@@ -152,6 +177,7 @@
     </section>
     <script type="module" src="/main.js"></script>
     <script>
+      // show form
       document.querySelector("form").classList.add("hide");
       document
         .querySelector(".view_form")
@@ -160,6 +186,70 @@
         document.querySelector("form").classList.remove("hide");
         document.querySelector("form").classList.add("opacity");
       }
+
+      //toggle form btn type
+      document
+        .querySelector(".game_type")
+        .addEventListener("mouseover", mouseOverType);
+
+      document
+        .querySelector(".game_game")
+        .addEventListener("mouseover", mouseOverGames);
+
+      document
+        .querySelector(".game_imp")
+        .addEventListener("mouseover", mouseOverImp);
+
+      document
+        .querySelector(".game_prop")
+        .addEventListener("mouseover", mouseOverProp);
+
+      function mouseOverProp() {
+        console.log("mouse in");
+        let dropCont = document.querySelector(".prop_content");
+        dropCont.classList.remove("hide");
+
+        document
+          .querySelector(".game_prop")
+          .addEventListener("mouseout", () => {
+            dropCont.classList.add("hide");
+          });
+      }
+      function mouseOverImp() {
+        console.log("mouse in");
+        let dropCont = document.querySelector(".imp_content");
+        dropCont.classList.remove("hide");
+
+        document.querySelector(".game_imp").addEventListener("mouseout", () => {
+          dropCont.classList.add("hide");
+        });
+      }
+
+      function mouseOverType() {
+        console.log("mouse in");
+        let dropCont = document.querySelector(".type_content");
+        dropCont.classList.remove("hide");
+
+        document
+          .querySelector(".game_type")
+          .addEventListener("mouseout", () => {
+            dropCont.classList.add("hide");
+          });
+      }
+
+      function mouseOverGames() {
+        console.log("mouse in");
+        let dropCont = document.querySelector(".game_content");
+        dropCont.classList.remove("hide");
+
+        document
+          .querySelector(".game_game")
+          .addEventListener("mouseout", () => {
+            dropCont.classList.add("hide");
+          });
+      }
+
+      //toggle form btn type
     </script>
   </body>
 </html>
