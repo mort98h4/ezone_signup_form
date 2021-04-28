@@ -6,12 +6,6 @@ export function formController() {
     document.querySelector("form").classList.add("hide");
     document.querySelector(".view_form").addEventListener("click", displayForm);
 
-    //toggle form btn type
-    document.querySelector(".game_type").addEventListener("mouseover", mouseOverType);
-    document.querySelector(".game_game").addEventListener("mouseover", mouseOverGames);
-    document.querySelector(".game_imp").addEventListener("mouseover", mouseOverImp);
-    document.querySelector(".game_prop").addEventListener("mouseover", mouseOverProp);
-
     displayFieldsets("#gameTypes", json.types, "game_type");
     displayFieldsets("#games", json.games, "games");
     displayFieldsets("#problemAreas", json.areas, "problem_area");
@@ -60,48 +54,3 @@ function displayFieldsets(destination, jsonData, nameAtr) {
         }   
     });
 }
-
-function mouseOverProp() {
-    console.log("mouse in");
-    let dropCont = document.querySelector(".prop_content");
-    dropCont.classList.remove("hide");
-
-    document
-      .querySelector(".game_prop")
-      .addEventListener("mouseout", () => {
-        dropCont.classList.add("hide");
-      });
-  }
-  function mouseOverImp() {
-    console.log("mouse in");
-    let dropCont = document.querySelector(".imp_content");
-    dropCont.classList.remove("hide");
-
-    document.querySelector(".game_imp").addEventListener("mouseout", () => {
-      dropCont.classList.add("hide");
-    });
-  }
-
-  function mouseOverType() {
-    console.log("mouse in");
-    let dropCont = document.querySelector(".type_content");
-    dropCont.classList.remove("hide");
-
-    document
-      .querySelector(".game_type")
-      .addEventListener("mouseout", () => {
-        dropCont.classList.add("hide");
-      });
-  }
-
-  function mouseOverGames() {
-    console.log("mouse in");
-    let dropCont = document.querySelector(".game_content");
-    dropCont.classList.remove("hide");
-
-    document
-      .querySelector(".game_game")
-      .addEventListener("mouseout", () => {
-        dropCont.classList.add("hide");
-      });
-  }
