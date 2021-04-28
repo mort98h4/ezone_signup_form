@@ -3,13 +3,28 @@
 import json from "./data.json";
 
 export function formController() {
-    displayForm("#gameTypes", json.types, "game_type");
-    displayForm("#games", json.games, "games");
-    displayForm("#problemAreas", json.areas, "problem_area");
-    displayForm("#improvementAreas", json.areas, "improvement_area");
+    document.querySelector("form").classList.add("hide");
+    document.querySelector(".view_form").addEventListener("click", displayForm);
+
+    //toggle form btn type
+    document.querySelector(".game_type").addEventListener("mouseover", mouseOverType);
+    document.querySelector(".game_game").addEventListener("mouseover", mouseOverGames);
+    document.querySelector(".game_imp").addEventListener("mouseover", mouseOverImp);
+    document.querySelector(".game_prop").addEventListener("mouseover", mouseOverProp);
+
+    displayFieldsets("#gameTypes", json.types, "game_type");
+    displayFieldsets("#games", json.games, "games");
+    displayFieldsets("#problemAreas", json.areas, "problem_area");
+    displayFieldsets("#improvementAreas", json.areas, "improvement_area");
 }
 
-function displayForm(destination, jsonData, nameAtr) {
+function displayForm() {
+    document.querySelector(".view_form").removeEventListener("click", displayForm);
+    document.querySelector("form").classList.remove("hide");
+    document.querySelector("form").classList.add("opacity");
+}
+
+function displayFieldsets(destination, jsonData, nameAtr) {
     const dest = document.querySelector(destination);
 
     jsonData.forEach(entry => {
@@ -45,3 +60,48 @@ function displayForm(destination, jsonData, nameAtr) {
         }   
     });
 }
+
+function mouseOverProp() {
+    console.log("mouse in");
+    let dropCont = document.querySelector(".prop_content");
+    dropCont.classList.remove("hide");
+
+    document
+      .querySelector(".game_prop")
+      .addEventListener("mouseout", () => {
+        dropCont.classList.add("hide");
+      });
+  }
+  function mouseOverImp() {
+    console.log("mouse in");
+    let dropCont = document.querySelector(".imp_content");
+    dropCont.classList.remove("hide");
+
+    document.querySelector(".game_imp").addEventListener("mouseout", () => {
+      dropCont.classList.add("hide");
+    });
+  }
+
+  function mouseOverType() {
+    console.log("mouse in");
+    let dropCont = document.querySelector(".type_content");
+    dropCont.classList.remove("hide");
+
+    document
+      .querySelector(".game_type")
+      .addEventListener("mouseout", () => {
+        dropCont.classList.add("hide");
+      });
+  }
+
+  function mouseOverGames() {
+    console.log("mouse in");
+    let dropCont = document.querySelector(".game_content");
+    dropCont.classList.remove("hide");
+
+    document
+      .querySelector(".game_game")
+      .addEventListener("mouseout", () => {
+        dropCont.classList.add("hide");
+      });
+  }
