@@ -124,10 +124,18 @@ function addEventListenersToBtns(el) {
         if (!firstName || !lastName || !email || !gamerTag || !password) {
             el.setAttribute("hidden", true);
             document.querySelector("#personalInfo").removeAttribute("hidden");
+            document.querySelectorAll(".btn_container_form .btn").forEach(btn => {
+                btn.classList.remove("active");
+            })
+            document.querySelector(".btn[data-step='1']").classList.add("active");
             isFormValid();
         } else if (!hoursADay) {
             el.setAttribute("hidden", true);
             document.querySelector("#gamerInfo").removeAttribute("hidden");
+            document.querySelectorAll(".btn_container_form .btn").forEach(btn => {
+                btn.classList.remove("active");
+            })
+            document.querySelector(".btn[data-step='2']").classList.add("active");
             isFormValid();
         } else {
             const platforms = [];
