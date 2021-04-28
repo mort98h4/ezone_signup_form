@@ -3,6 +3,11 @@
 form {
   background-color: vars.$button-fill;
   width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   p {
     text-align: center;
     margin: 5rem 0;

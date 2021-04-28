@@ -1,0 +1,16 @@
+@use "../abstracts/vars";
+
+.dropdown {
+  position: relative;
+  width: 10rem;
+}
+
+.drop_content {
+  top: 2.2rem;
+  position: absolute;
+  background-color: turquoise;
+  min-width: 10rem;
+  z-index: 2;
+  height: 150px;
+  overflow-y: scroll;
+}

@@ -3,34 +3,34 @@
 /* SHAPIRO FONT */
 @font-face {
   font-family: shapiro5;
-  src: url(public/shapiro/ogj_type_design_-_shapiro_5_light_fly-webfont.woff2);
+  src: url(./shapiro/ogj_type_design_-_shapiro_5_light_fly-webfont.woff2);
 }
 
 @font-face {
   font-family: shapiro35;
-  src: url(public/shapiro/ogj_type_design_-_shapiro_35_feather_text-webfont.woff2);
+  src: url(./shapiro/ogj_type_design_-_shapiro_35_feather_text-webfont.woff2);
 }
 
 @font-face {
   font-family: shapiro97;
-  src: url(public/shapiro/ogj_type_design_-_shapiro_97_air_extd-webfont.woff2);
+  src: url(./shapiro/ogj_type_design_-_shapiro_97_air_extd-webfont.woff2);
 }
 
 /* INIFORM FONT */
 
 @font-face {
   font-family: uniform_condensed_bold;
-  src: url(public/uniform/uniform_condensed_bold-webfont.woff2);
+  src: url(./uniform/uniform_condensed_bold-webfont.woff2);
 }
 
 @font-face {
   font-family: uniform_condensed_light;
-  src: url(public/uniform/uniform_condensed_light-webfont.woff2);
+  src: url(./uniform/uniform_condensed_light-webfont.woff2);
 }
 
 @font-face {
   font-family: uniform_condensed_medium;
-  src: url(public/uniform/uniform_condensed_medium-webfont.woff2);
+  src: url(./uniform/uniform_condensed_medium-webfont.woff2);
 }
 
 h2 {
@@ -59,7 +59,8 @@ button {
 }
 
 label,
-legend {
+legend,
+span {
   color: vars.$font-color;
 }
 
