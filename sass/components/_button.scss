@@ -53,6 +53,11 @@ button:hover {
     cursor: pointer;
   }
 
+  .active {
+    background-color: vars.$bg-color;
+    color: vars.$font-color;
+  }
+
   .btn:hover {
     background-color: vars.$bg-color;
     color: vars.$font-color;

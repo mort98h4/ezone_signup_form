@@ -16,10 +16,37 @@ export function isFormValid() {
 }
 
 function addEventListenersToBtns(el) {
+    const step1Btn = document.querySelector(".btn[data-step='1']");
+    const step2Btn = document.querySelector(".btn[data-step='2']");
+    const step3Btn = document.querySelector(".btn[data-step='3']");
     const prevBtn = document.querySelector("#prevBtn");
     const nextBtn = document.querySelector("#nextBtn");
     const submitBtn = document.querySelector("input[type=submit]");
     const form = document.querySelector("form");
+
+    step1Btn.addEventListener("click", stepClick);
+    step2Btn.addEventListener("click", stepClick);
+    step3Btn.addEventListener("click", stepClick);
+
+    function stepClick() {
+        step1Btn.removeEventListener("click", stepClick);
+        step2Btn.removeEventListener("click", stepClick);
+        step3Btn.removeEventListener("click", stepClick);
+        nextBtn.removeEventListener("click", clickNext);
+        prevBtn.removeEventListener("click", clickPrev);
+        form.removeEventListener("submit", submitClick);
+        console.log(this);
+        console.log(this.dataset.step);
+        document.querySelectorAll(".btn_container_form .btn").forEach(btn => {
+            btn.classList.remove("active");
+        })
+        this.classList.add("active");
+        document.querySelectorAll("fieldset").forEach(fieldset => {
+            fieldset.setAttribute("hidden", true);
+        })
+        document.querySelector(`fieldset[data-step='${this.dataset.step}']`).removeAttribute("hidden");
+        isFormValid();
+    }
 
     nextBtn.addEventListener("click", clickNext);
     prevBtn.addEventListener("click", clickPrev);
@@ -33,12 +60,22 @@ function addEventListenersToBtns(el) {
     }
 
     function clickNext() {
+        step1Btn.removeEventListener("click", stepClick);
+        step2Btn.removeEventListener("click", stepClick);
+        step3Btn.removeEventListener("click", stepClick);
         nextBtn.removeEventListener("click", clickNext);
         prevBtn.removeEventListener("click", clickPrev);
         form.removeEventListener("submit", submitClick);
 
         el.setAttribute("hidden", true);
         el.nextElementSibling.removeAttribute("hidden");
+        console.log(el.nextElementSibling.dataset.step);
+
+        document.querySelectorAll(".btn_container_form .btn").forEach(btn => {
+            btn.classList.remove("active");
+        })
+        document.querySelector(`.btn[data-step='${el.nextElementSibling.dataset.step}']`).classList.add("active");
+
         isFormValid();
     }
 
@@ -49,17 +86,29 @@ function addEventListenersToBtns(el) {
     }
 
     function clickPrev() {
+        step1Btn.removeEventListener("click", stepClick);
+        step2Btn.removeEventListener("click", stepClick);
+        step3Btn.removeEventListener("click", stepClick);
         prevBtn.removeEventListener("click", clickPrev);
         nextBtn.removeEventListener("click", clickNext);
         form.removeEventListener("submit", submitClick);
 
         el.setAttribute("hidden", true);
         el.previousElementSibling.removeAttribute("hidden");
+        console.log(el.previousElementSibling.dataset.step);
+
+        document.querySelectorAll(".btn_container_form .btn").forEach(btn => {
+            btn.classList.remove("active");
+        })
+        document.querySelector(`.btn[data-step='${el.previousElementSibling.dataset.step}']`).classList.add("active");
         isFormValid();
     }
 
     form.addEventListener("submit", submitClick);
     function submitClick(event) {
+        step1Btn.removeEventListener("click", stepClick);
+        step2Btn.removeEventListener("click", stepClick);
+        step3Btn.removeEventListener("click", stepClick);
         prevBtn.removeEventListener("click", clickPrev);
         nextBtn.removeEventListener("click", clickNext);
         form.removeEventListener("submit", submitClick);
